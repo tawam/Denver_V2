@@ -1,0 +1,59 @@
+{
+  "product": "MMA 120",
+  "category": "INVERSOR PARA SOLDAGEM",
+  "process": "ELETRODO + LIFT TIG",
+  "hero": {
+    "title": "SUA OFICINA EM QUALQUER LUGAR",
+    "description": "Compacta e potente, a MMA 120 Denver é a solução definitiva para mobilidade. Ideal para reparos rápidos e serviços em altura.",
+    "badge": "Bivolt Aut. 127/220V"
+  },
+  "origin": {
+    "developed": "DESENVOLVIDO NO BRASIL POR DENVER SOLDAS LTDA",
+    "madeIn": "Produzido na China",
+    "standard": "Equipamento conforme Norma IEC 60974"
+  },
+  "package": [
+    {"description":"Fonte de Soldagem","quantity":1},
+    {"description":"Porta Eletrodo","quantity":1},
+    {"description":"Garra Negativa","quantity":1},
+    {"description":"Manual","quantity":1}
+  ],
+  "features": [
+    "Cabos 100% cobre: maior condução e durabilidade.",
+    "Painel digital de ajuste rápido e preciso.",
+    "Proteção contra flutuações de energia elétrica.",
+    "Funções Hot Start, Arc Force e Anti Stick: solda com melhor acabamento.",
+    "Compacta, leve e resistente: ideal para obras e trabalhos externos."
+  ],
+  "applications": ["Serralheria Leve","Manutenção Residencial","Reparos Automotivos"],
+  "technologyTitle": "ULTRA-PORTABILIDADE E TECNOLOGIA INVERSORA PARA REPAROS RÁPIDOS",
+  "characteristics": ["Tecnologia IGBT avançada","Proteção térmica automática","Ajuste linear de corrente"],
+  "advantages": ["Arco elétrico estável e macio","Maior durabilidade do equipamento","Facilidade extrema de transporte"],
+  "benefits": ["Redução no consumo de energia","Menor índice de respingos","Aceita oscilações da rede elétrica"],
+  "technical": {
+    "mma": {
+      "processo": "MMA Eletrodo",
+      "bitola": "1,0/ 2,0 / 2,5 mm",
+      "especificacao": "7018, 6013, inox, ferro fundido",
+      "corrente": "MMA127V-31,5A / MMA220V- 24A",
+      "fases": "Monofásica 1PH",
+      "regulagem": "MMA127V-20A/20,8 - 100A/24V / MMA220V-20A/20,8V - 120A/24,8V",
+      "ciclo": "MMA127V-100% com 45A/21,8V / MMA220V-100% com 54A/22,1V",
+      "frequencia": "50/60HZ"
+    },
+    "tig": {
+      "processo": "TIG Varetas",
+      "bitola": "1,0 / 2,0 / 2,5 mm",
+      "especificacao": "Aço Carbono, Inox, Bronze, Ferro fundido, Cobre e ligas ferrosas",
+      "corrente": "TIG127V-19,3A / TIG220V-15,3A",
+      "fases": "Monofásica 1PH",
+      "regulagem": "TIG127V-20A/10,8V - 100A/14V / TIG220V-20A/10,8V - 120A/14,8V",
+      "ciclo": "TIG127V-100% com 45A/11,8V / TIG220V-100% com 54A/12,1V",
+      "frequencia": "50/60HZ"
+    },
+    "advanced": "ARC FORCE/ HOT STAR/ VRD/ ANTI STICK"
+  },
+  "related": ["Eletrodos Convencionais","Eletrodos Especiais","Varetas TIG","Não ressecáveis"],
+  "contact": "(31) 3441-4688 / (19) 3832-5444",
+  "website": "www.denversoldas.com.br"
+}
