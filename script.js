@@ -27,3 +27,16 @@ galleryThumbs.forEach((button) => {
     preload.src = src;
   });
 });
+
+const technologySection = document.querySelector('.technology');
+
+if (technologySection) {
+  const backgroundObserver = new IntersectionObserver((entries) => {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('is-bg-loaded');
+    backgroundObserver.unobserve(entry.target);
+  }, { rootMargin: '400px 0px' });
+
+  backgroundObserver.observe(technologySection);
+}

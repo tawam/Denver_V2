@@ -1,0 +1,19 @@
+{
+  "name": "denver_v2-main",
+  "version": "1.0.0",
+  "description": "Denver MMA 120 static product page",
+  "main": "script.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5"
+  }
+}
