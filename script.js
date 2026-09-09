@@ -1,3 +1,5 @@
+/* global window */
+
 const revealElements = [...document.querySelectorAll('.reveal')];
 
 document.querySelectorAll('main section').forEach((section) => {
@@ -106,3 +108,70 @@ document.querySelectorAll('.table-wrap').forEach((tableWrap) => {
   tableWrap.addEventListener('scroll', updateScrollState, { passive: true });
   updateScrollState();
 });
+
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (finePointer.matches && !reducedMotion.matches) {
+  let scrollPosition = window.scrollY;
+  let scrollTarget = window.scrollY;
+  let scrollFrame = 0;
+  let lastFrameTime = 0;
+  let isProgrammaticScroll = false;
+
+  const getMaximumScroll = () => Math.max(
+    0,
+    document.documentElement.scrollHeight - window.innerHeight,
+  );
+
+  const renderSmoothScroll = (time) => {
+    if (!lastFrameTime) lastFrameTime = time;
+    const elapsed = Math.min(64, time - lastFrameTime);
+    const blend = 1 - Math.pow(0.002, elapsed / 1000);
+    lastFrameTime = time;
+    scrollPosition += (scrollTarget - scrollPosition) * blend;
+
+    if (Math.abs(scrollTarget - scrollPosition) < 0.45) {
+      scrollPosition = scrollTarget;
+    }
+
+    isProgrammaticScroll = true;
+    window.scrollTo(0, scrollPosition);
+    isProgrammaticScroll = false;
+
+    if (scrollPosition !== scrollTarget) {
+      scrollFrame = window.requestAnimationFrame(renderSmoothScroll);
+    } else {
+      scrollFrame = 0;
+      lastFrameTime = 0;
+    }
+  };
+
+  window.addEventListener('wheel', (event) => {
+    if (event.ctrlKey || event.defaultPrevented) return;
+
+    const horizontalScroller = event.target.closest('.gallery-strip, .table-wrap');
+    const isHorizontalGesture = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+    if (horizontalScroller && isHorizontalGesture) return;
+
+    event.preventDefault();
+    const deltaMultiplier = event.deltaMode === 1
+      ? 16
+      : event.deltaMode === 2 ? window.innerHeight : 1;
+    scrollTarget = Math.min(
+      getMaximumScroll(),
+      Math.max(0, scrollTarget + event.deltaY * deltaMultiplier),
+    );
+
+    if (!scrollFrame) {
+      scrollPosition = window.scrollY;
+      scrollFrame = window.requestAnimationFrame(renderSmoothScroll);
+    }
+  }, { passive: false });
+
+  window.addEventListener('scroll', () => {
+    if (isProgrammaticScroll || scrollFrame) return;
+    scrollPosition = window.scrollY;
+    scrollTarget = window.scrollY;
+  }, { passive: true });
+}
