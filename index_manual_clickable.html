@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f1eb" />
+  <title>MMA 120 — Denver Soldas</title>
+  <meta name="description" content="MMA 120 — inversor para soldagem Eletrodo + Lift TIG." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="brand-symbols" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="denver-logo-symbol" viewBox="0 0 2671.27 1240.51">
+        <path fill="#eb6e03" d="M1293.48,559.31l217.23,16.64-276.65-262.58c-52.57-36.33-99.01,9.28-55.7,59.18l118.83,123.89c-130.59-29.9-140.49,26.19-107.69,62.87l499.46,380.94-395.48-380.94ZM1202.27,342.73c-7.24-7.74,2.02-22.5,20.38-15.26l129.94,128.86,1.7,8.49-152.02-122.09ZM1263.51,548.87l165.88,169.41-195.27-155.32c-13.4-10.66,8.99-36.92,29.39-14.09Z" />
+        <path fill="#fff" d="M651.52,767.98h-79.54v-49.1l-33.38,49.1c-8.84,2.45-21.11,5.89-35.35,5.89-71.68,0-103.6-62.84-103.6-124.22,0-72.67,45.18-130.11,111.45-130.11,32.9,0,51.06,11.79,60.88,18.17v-116.36h79.54v346.63ZM571.98,589.27c-4.42-3.45-17.18-12.77-36.33-12.77-40.27,0-54.01,38.79-54.01,73.16,0,14.23,1.97,35.36,15.22,51.06,7.37,8.84,20.13,17.67,39.28,17.67,13.26,0,24.55-3.92,35.84-10.31v-118.81ZM898.49,766.02c-27,6.39-52.53,7.85-68.73,7.85-106.54,0-143.86-63.33-143.86-126.66,0-71.69,46.15-127.67,129.62-127.67,23.57,0,67.27,3.44,97.71,39.27,28.48,33.4,28.48,74.63,28.48,100.16h-171.35c0,4.91,7.86,34.86,27.5,47.63,17.18,11.29,32.4,14.73,56.95,14.73,27.01,0,53.52-5.88,78.56-16.19l-34.86,60.88ZM865.1,616.26c-.49-8.32-1.47-24.05-13.74-36.32-8.83-8.85-20.13-13.26-32.9-13.26-21.59,0-43.7,13.75-49.59,49.58h96.23ZM972.16,531.34h77.58v54.98l38.79-53.51c16.2-5.4,32.4-7.37,45.66-7.37,12.28,0,38.79,1.48,58.43,21.12,20.62,20.61,21.11,46.63,21.11,67.27v160.05h-78.06v-127.17c0-38.28-6.88-62.84-43.7-62.84-17.68,0-32.4,7.86-42.22,15.72v174.29h-77.58v-242.53ZM1618.88,773.87h-85.92l-90.34-242.53h86.41l48.6,166.43,47.64-166.43h83.46l-89.84,242.53ZM1933.6,766.02c-27,6.39-52.54,7.85-68.74,7.85-106.54,0-143.85-63.33-143.85-126.66,0-71.69,46.15-127.67,129.61-127.67,23.57,0,67.27,3.44,97.7,39.27,28.48,33.4,28.48,74.63,28.48,100.16h-171.35c0,4.91,7.86,34.86,27.49,47.63,17.19,11.29,32.41,14.73,56.95,14.73,27.01,0,53.52-5.88,78.56-16.19l-34.86,60.88ZM1900.21,616.26c-.49-8.32-1.47-24.05-13.75-36.32-8.84-8.85-20.13-13.26-32.9-13.26-21.6,0-43.7,13.75-49.59,49.58h96.24ZM2087.29,773.87h-80.03v-242.53h80.03v49.1l33.88-49.1c17.68-5.9,36.82-6.4,42.71-6.4,6.88,0,10.8.49,15.23,1.49v78.07c-13.26-9.34-30.94-20.64-54.51-20.64-19.64,0-31.41,6.88-37.32,10.32v179.69ZM2231.95,554.68h6.62c3.15,0,5.31-.48,6.46-1.42,1.15-.94,1.74-2.18,1.74-3.75,0-.99-.29-1.89-.84-2.68-.56-.78-1.32-1.37-2.3-1.76-.99-.39-2.81-.58-5.48-.58h-6.19v10.19ZM2226.49,573.67v-33.75h11.6c3.97,0,6.84.29,8.62.92,1.77.62,3.18,1.72,4.24,3.27,1.05,1.56,1.57,3.21,1.57,4.95,0,2.47-.88,4.62-2.63,6.45-1.76,1.83-4.11,2.85-7.01,3.08,1.19.5,2.16,1.09,2.86,1.78,1.37,1.34,3.03,3.57,5,6.7l4.12,6.6h-6.66l-2.99-5.32c-2.36-4.17-4.25-6.8-5.69-7.85-1-.78-2.46-1.16-4.38-1.16h-3.19v14.33h-5.45ZM2240.26,530.13c-4.41,0-8.7,1.14-12.87,3.39-4.17,2.26-7.44,5.49-9.8,9.68-2.35,4.2-3.53,8.57-3.53,13.13s1.16,8.85,3.48,12.99c2.31,4.14,5.55,7.38,9.71,9.7,4.16,2.31,8.48,3.48,13.02,3.48s8.85-1.17,13.02-3.48c4.16-2.31,7.38-5.55,9.69-9.7,2.3-4.15,3.44-8.47,3.44-12.99s-1.16-8.93-3.51-13.13c-2.34-4.19-5.6-7.42-9.79-9.68-4.19-2.26-8.47-3.39-12.85-3.39Z" />
+      </symbol>
+    </defs>
+  </svg>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Denver Soldas">
+        <img src="assets/brand/denver-logo-on-light.svg" alt="Denver Soldas" />
+      </a>
+      <nav class="nav" aria-label="Navegação">
+        <a href="#conteudo">Conteúdo da embalagem</a>
+        <a href="#aplicacoes">Aplicações principais</a>
+        <a href="#dados-tecnicos">Dados Técnicos</a>
+        <a class="nav-contact" href="#contato">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-light">
+      <div class="hero-accent hero-accent-bottom"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <img class="mma-logo" src="assets/icons/Logo_MMA_120_BLACK.svg" alt="MMA 120" />
+          <div class="process-title">
+            <strong>INVERSOR PARA SOLDAGEM</strong>
+            <span>ELETRODO + LIFT TIG</span>
+          </div>
+          <div class="hero-heading-wrap">
+            <span class="orange-rule"></span>
+            <h1><span>SUA OFICINA</span><br>EM QUALQUER LUGAR</h1>
+          </div>
+          <p class="hero-text">Compacta e potente, a MMA 120 Denver é a solução definitiva para mobilidade. Ideal para reparos rápidos e serviços em altura.</p>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-product-stage">
+            <img id="heroProduct" class="hero-product" src="assets/images/mma120-hero.webp" alt="Denver MMA 120" />
+            <img class="bivolt-seal" src="assets/icons/Bivolt_Orange.svg" alt="Bivolt Aut. 127/220V" />
+          </div>
+          <div class="gallery-strip" aria-label="Vistas da MMA 120">
+            <button class="gallery-thumb is-active" data-src="assets/images/mma120-hero.webp" aria-label="Vista principal"><img src="assets/images/mma120-hero.webp" alt="" /></button>
+            <button class="gallery-thumb" data-src="assets/images/view-front.webp" aria-label="Vista frontal"><img src="assets/images/view-front.webp" alt="" /></button>
+            <button class="gallery-thumb" data-src="assets/images/view-right.webp" aria-label="Vista lateral direita"><img src="assets/images/view-right.webp" alt="" /></button>
+            <button class="gallery-thumb" data-src="assets/images/view-left.webp" aria-label="Vista lateral esquerda"><img src="assets/images/view-left.webp" alt="" /></button>
+            <button class="gallery-thumb" data-src="assets/images/view-back.webp" aria-label="Vista traseira"><img src="assets/images/view-back.webp" alt="" /></button>
+            <button class="gallery-thumb" data-src="assets/images/view-top.webp" aria-label="Vista superior"><img src="assets/images/view-top.webp" alt="" /></button>
+            <button class="gallery-thumb" data-src="assets/images/view-bottom.webp" aria-label="Vista inferior"><img src="assets/images/view-bottom.webp" alt="" /></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identity-strip">
+      <div class="shell identity-grid">
+        <div class="process-icons reveal">
+          <img src="assets/icons/conection.svg" alt="" />
+          <img src="assets/icons/arrow.svg" alt="" />
+          <img src="assets/icons/vrd.svg" alt="VRD" />
+          <div class="origin-copy">
+            <strong>DESENVOLVIDO NO BRASIL POR DENVER SOLDAS LTDA</strong>
+            <span>Produzido na China</span>
+          </div>
+        </div>
+        <div class="safety-group reveal">
+          <div class="safety-icons">
+            <img src="assets/icons/Livro_I.svg" alt="" />
+            <img src="assets/icons/Exclamation.svg" alt="" />
+            <img src="assets/icons/man_glass.svg" alt="" />
+            <img src="assets/icons/man_mask.svg" alt="" />
+            <img src="assets/icons/hands.svg" alt="" />
+          </div>
+          <strong>Equipamento conforme Norma IEC 60974</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" class="package section-pad section-light">
+      <div class="shell">
+        <div class="section-label reveal"><span>CONTEÚDO DA EMBALAGEM</span></div>
+        <div class="package-grid">
+          <figure class="package-photo reveal">
+            <img src="assets/images/package-kit.webp" alt="Conteúdo da embalagem da MMA 120" />
+          </figure>
+          <div class="package-side reveal">
+            <div class="package-table">
+              <div class="package-head"><span>Descrição</span><span>Quantidade</span></div>
+              <div class="package-row"><strong>Fonte de Soldagem</strong><span>1</span></div>
+              <div class="package-row"><strong>Porta Eletrodo</strong><span>1</span></div>
+              <div class="package-row"><strong>Garra Negativa</strong><span>1</span></div>
+              <div class="package-row"><strong>Manual</strong><span>1</span></div>
+              <div class="package-total"><strong>Total de Itens:</strong><span>4</span></div>
+            </div>
+            <div class="manual-access">
+              <img class="manual-qr" src="assets/icons/Denver_QR_CODE.svg" alt="QR Code do manual da MMA 120" />
+              <a class="manual-label" href="https://qr1.me-qr.com/pt/link-list/qrlthtjs/show" target="_blank" rel="noopener noreferrer">Escaneie para ver o Manual</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-band section-dark">
+      <div class="feature-orange-block"></div>
+      <div class="shell feature-layout">
+        <div class="feature-brand-area reveal">
+          <svg class="feature-denver-logo-svg" role="img" aria-label="Denver Soldas" viewBox="0 0 2671.27 1240.51"><use href="#denver-logo-symbol"></use></svg>
+        </div>
+        <div class="feature-content-area">
+          <img class="feature-mma-logo reveal" src="assets/icons/Logo_MMA_120_WHITE.svg" alt="MMA 120" />
+          <div class="feature-list">
+            <div class="feature-item reveal"><img src="assets/icons/raio_denver.svg" alt="" /><p>Cabos 100% cobre: maior condução e durabilidade.</p></div>
+            <div class="feature-item reveal"><img src="assets/icons/raio_denver.svg" alt="" /><p>Painel digital de ajuste rápido e preciso.</p></div>
+            <div class="feature-item reveal"><img src="assets/icons/raio_denver.svg" alt="" /><p>Proteção contra flutuações de energia elétrica.</p></div>
+            <div class="feature-item reveal"><img src="assets/icons/raio_denver.svg" alt="" /><p>Funções Hot Start, Arc Force e Anti Stick: solda com melhor acabamento.</p></div>
+            <div class="feature-item reveal"><img src="assets/icons/raio_denver.svg" alt="" /><p>Compacta, leve e resistente: ideal para obras e trabalhos externos.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aplicacoes" class="applications section-pad section-light">
+      <div class="shell">
+        <div class="applications-frame reveal">
+          <div class="applications-title">Aplicações Principais</div>
+          <div class="applications-grid">
+            <article><img src="assets/icons/serrilha_leve.svg" alt="" /><h2>Serralheria<br>Leve</h2></article>
+            <article><img src="assets/icons/residential_maintence.svg" alt="" /><h2>Manutenção<br>Residencial</h2></article>
+            <article><img src="assets/icons/reparos_automotivos.svg" alt="" /><h2>Reparos<br>Automotivos</h2></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="technology section-dark">
+      <div class="technology-orange-block"></div>
+      <div class="shell technology-grid">
+        <div class="technology-media reveal">
+          <img src="assets/images/mma120-hero.webp" alt="Denver MMA 120" />
+        </div>
+        <div class="technology-copy reveal">
+          <img src="assets/icons/Logo_MMA_120_WHITE.svg" alt="MMA 120" />
+          <h2><span>ULTRA-PORTABILIDADE</span><br><span>E TECNOLOGIA INVERSORA</span> PARA<br>REPAROS RÁPIDOS</h2>
+          <div class="tech-line"><span></span><img src="assets/icons/raio_denver.svg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="triad section-pad section-light">
+      <div class="shell triad-grid">
+        <article class="triad-card reveal">
+          <h2>Características</h2>
+          <ul>
+            <li>Tecnologia IGBT avançada</li>
+            <li>Proteção térmica automática</li>
+            <li>Ajuste linear de corrente</li>
+          </ul>
+        </article>
+        <article class="triad-card reveal">
+          <h2>Vantagens</h2>
+          <ul>
+            <li>Arco elétrico estável e macio</li>
+            <li>Maior durabilidade do equipamento</li>
+            <li>Facilidade extrema de transporte</li>
+          </ul>
+        </article>
+        <article class="triad-card reveal">
+          <h2>Benefícios</h2>
+          <ul>
+            <li>Redução no consumo de energia</li>
+            <li>Menor índice de respingos</li>
+            <li>Aceita oscilações da rede elétrica</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="dados-tecnicos" class="technical section-dark section-pad">
+      <div class="shell">
+        <div class="technical-title reveal">Dados Técnicos</div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr><th></th><th>MMA Eletrodo</th><th>TIG Varetas</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Processo de solda</th><td>MMA Eletrodo</td><td>TIG Varetas</td></tr>
+              <tr><th>Bitola</th><td>1,0/ 2,0 / 2,5 mm</td><td>1,0 / 2,0 / 2,5 mm</td></tr>
+              <tr><th>Especificação</th><td>7018, 6013, inox, ferro fundido</td><td>Aço Carbono, Inox, Bronze, Ferro fundido, Cobre e ligas ferrosas</td></tr>
+              <tr><th>Corrente máx. de entrada</th><td>MMA127V-31,5A<br>MMA220V- 24A</td><td>TIG127V-19,3A<br>TIG220V-15,3A</td></tr>
+              <tr><th>Número de fases</th><td>Monofásica 1PH</td><td>Monofásica 1PH</td></tr>
+              <tr><th>Faixa de regulagem</th><td>MMA127V-20A/20,8 - 100A/24V<br>MMA220V-20A/20,8V - 120A/24,8V</td><td>TIG127V-20A/10,8V - 100A/14V<br>TIG220V-20A/10,8V - 120A/14,8V</td></tr>
+              <tr><th>Configurações Avançadas</th><td colspan="2">ARC FORCE/ HOT STAR/ VRD/ ANTI STICK</td></tr>
+              <tr><th>Ciclo de trabalho</th><td>MMA127V-100% com 45A/21,8V<br>MMA220V-100% com 54A/22,1V</td><td>TIG127V-100% com 45A/11,8V<br>TIG220V-100% com 54A/12,1V</td></tr>
+              <tr><th>Frequencia</th><td>50/60HZ</td><td>50/60HZ</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="related section-light">
+      <div class="related-heading-wrap">
+        <div class="related-heading">Conheça as outras linhas de produtos Denver</div>
+      </div>
+      <div class="shell related-grid">
+        <article class="related-card reveal"><img src="assets/images/related-convencionais.webp" alt="Eletrodos Convencionais" /><h2>Eletrodos Convencionais</h2></article>
+        <article class="related-card reveal"><img src="assets/images/related-especiais.webp" alt="Eletrodos Especiais" /><h2>Eletrodos Especiais</h2></article>
+        <article class="related-card reveal"><img src="assets/images/related-tig.webp" alt="Varetas TIG" /><h2>Varetas TIG</h2></article>
+        <article class="related-card reveal"><img src="assets/images/related-nao-ressecaveis.webp" alt="Não ressecáveis" /><h2>Não ressecáveis</h2></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="footer section-dark">
+    <div class="shell footer-main">
+      <div class="footer-contact">
+        <p class="footer-kicker">FALE CONOSCO</p>
+        <strong>(31) 3441-4688 / (19) 3832-5444</strong>
+      </div>
+
+      <div class="footer-unit">
+        <h2>Escritório e Centro de Distribuição</h2>
+        <p>CNPJ: 22.671.564/0002-70</p>
+        <p>Rua Cardeal Arco Verde, 1240</p>
+        <p>Água Branca - Contagem/MG</p>
+        <p>CEP: 32.371-000</p>
+      </div>
+
+      <div class="footer-unit">
+        <h2>Fábrica Minas Gerais</h2>
+        <p>CNPJ: 22.671.564/0001-99</p>
+        <p>Av. Governador Magalhães Pinto, 3433</p>
+        <p>Planalto - Montes Claros/MG</p>
+        <p>CEP: 39.404-166</p>
+      </div>
+
+      <div class="footer-unit">
+        <h2>Fábrica São Paulo</h2>
+        <p>CNPJ: 22.671.564/0004-31</p>
+        <p>Rua José Elpídio de Oliveira, 711A</p>
+        <p>Jardim Cidade Nova - Sumaré/SP</p>
+        <p>CEP: 13.178-312</p>
+      </div>
+
+      <div class="footer-brand">
+        <svg class="footer-logo-svg" role="img" aria-label="Denver Soldas" viewBox="0 0 2671.27 1240.51"><use href="#denver-logo-symbol"></use></svg>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <strong>Denver Soldas Ltda.</strong>
+      <a href="https://www.denversoldas.com.br" rel="noopener">www.denversoldas.com.br</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
